@@ -38,8 +38,9 @@ class VOCAnnotationTransform(object):
     """
 
     def __init__(self, class_to_ind=None, keep_difficult=False):
-        self.class_to_ind = class_to_ind or dict(
-            zip(VOC_CLASSES, range(len(VOC_CLASSES))))
+#         self.class_to_ind = class_to_ind or dict(
+#             zip(VOC_CLASSES, range(len(VOC_CLASSES))))
+        self.class_to_ind = {"TB":0}
         self.keep_difficult = keep_difficult
 
     def __call__(self, target, width, height):
@@ -55,7 +56,7 @@ class VOCAnnotationTransform(object):
             difficult = int(obj.find('difficult').text) == 1
             if not self.keep_difficult and difficult:
                 continue
-            name = obj.find('name').text.lower().strip()
+            name = obj.find('name').text.strip()
             bbox = obj.find('bndbox')
 
             pts = ['xmin', 'ymin', 'xmax', 'ymax']
