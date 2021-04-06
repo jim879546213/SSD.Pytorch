@@ -18,7 +18,7 @@ else:
     import xml.etree.ElementTree as ET
 
 VOC_CLASSES = (  # always index 0
-    'TB')
+    'tb')
 
 # note: if you used our download scripts, this should be right
 VOC_ROOT = osp.join('./', "data/voc/")
@@ -100,7 +100,7 @@ class VOCDetection(data.Dataset):
         self.target_transform = target_transform
         self.name = dataset_name
         self._annopath = osp.join('%s', 'Annotations', '%s.xml')
-        self._imgpath = osp.join('%s', 'JPEGImages', '%s.jpg')
+        self._imgpath = osp.join('%s', 'JPEGImages', '%s.tif')
         self.ids = list()
         for (year, name) in image_sets:
             rootpath = osp.join(self.root, 'VOC' + year)
