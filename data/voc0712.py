@@ -38,9 +38,9 @@ class VOCAnnotationTransform(object):
     """
 
     def __init__(self, class_to_ind=None, keep_difficult=False):
-#         self.class_to_ind = class_to_ind or dict(
-#             zip(VOC_CLASSES, range(len(VOC_CLASSES))))
-        self.class_to_ind = {"TB":0}
+        self.class_to_ind = class_to_ind or dict(
+            zip(VOC_CLASSES, range(len(VOC_CLASSES))))
+#         self.class_to_ind = {"TB":0}
         self.keep_difficult = keep_difficult
 
     def __call__(self, target, width, height):
