@@ -18,7 +18,7 @@ else:
     import xml.etree.ElementTree as ET
 
 VOC_CLASSES = (  # always index 0
-    'TB')
+    'bk','TB',)
 
 # note: if you used our download scripts, this should be right
 VOC_ROOT = osp.join('./', "data/voc/")
