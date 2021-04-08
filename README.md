@@ -2,6 +2,8 @@
 
 # SSD.Pytorch
 
+修正一些問題根據：https://github.com/amdegroot/ssd.pytorch/issues/161
+
 Pytorch implementation of [[SSD (Single Shot MultiBox Detector)](https://arxiv.org/abs/1512.02325)]. 
 
 this repository is heavily depend on this implementation [ssd.pytorch](https://github.com/amdegroot/ssd.pytorch).since orginal code is too old to fit the recent version of pytorch. I make some changes , fix some bugs, and give out SSD512  code.
